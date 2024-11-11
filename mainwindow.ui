@@ -171,6 +171,11 @@
       <string>3 * x - 4 * log(x) - 5 = 0</string>
      </property>
     </item>
+    <item>
+     <property name="text">
+      <string>x*x*x - 6*x*x + 11*x - 6</string>
+     </property>
+    </item>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">

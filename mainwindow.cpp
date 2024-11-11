@@ -38,6 +38,8 @@ double f(double x, char k1)
         return x * x - 4;
     case 1:
         return 3 * x - 4 * log(x) - 5;
+    case 2:
+        return x*x*x - 6*x*x + 11*x - 6;
     }
     return 0;
 }
@@ -55,8 +57,7 @@ double f2p(double x, double d, char k1)
 double MDP(double a, double b, double Eps, char k1, int &L)
 {
     double c, Fc;
-    while (b - a > Eps)
-    {
+    while (b - a > Eps) {
         c = a + 0.5 * (b - a);
         L = L + 1;
         Fc = f(c, k1);
@@ -120,6 +121,9 @@ void MainWindow::on_pushButton_clicked()
         break;
     case 1:
         k = 1;
+        break;
+    case 2:
+        k = 2;
         break;
     }
     if (k == -1) {
